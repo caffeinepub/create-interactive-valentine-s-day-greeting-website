@@ -1,35 +1,35 @@
 {
   "kind": "build_request",
-  "title": "Center selected element and update its text from “65b0” to “1j6s3j2”",
+  "title": "Update envelope overlay content to include centered heart icon between greeting and date",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Update ONLY the two user-selected DOM elements (Element 1 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3 and Element 2 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]) so that the content currently associated with/identified as “65b0” is centered within its container and its visible text/content is changed to exactly “1j6s3j2”.",
+      "id": "REQ-3",
+      "text": "In `frontend/src/components/ValentineEnvelopeScene.tsx`, locate the Screen 1 envelope overlay block marked `/* Content */` (currently rendering only the \"Hey Love\" heading and the \"14.02.2026\" date) and replace it with the user-provided version that: (1) adds `text-center`, `space-y-3`, and `z-10` to the container, (2) removes the `mb-2` class from the heading, and (3) inserts a centered circular gradient heart icon block between the heading and the date using `<Heart className=\"text-white\" size={30} fill=\"currentColor\" />`. Keep the visible copy exactly \"Hey Love\" and \"14.02.2026\".",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-user-1"
         ],
         "quotes": [
-          "make the 65b0 ceneter to 1j6s3j2"
+          "Find this part ... and replace it with ..."
         ]
       },
       "acceptanceCriteria": [
-        "Within the area corresponding to /main/div/div[4], the selected inner element (/div[3]) is visually centered (horizontally; and vertically if applicable to that container).",
-        "The displayed text/content for the selected inner element is exactly “1j6s3j2”.",
-        "No other elements outside the two provided XPaths are modified (no unintended layout/text changes elsewhere in the scene)."
+        "The envelope overlay content container uses `className=\"absolute inset-0 flex flex-col items-center justify-center text-center p-6 space-y-3 z-10\"`.",
+        "The overlay shows three vertically-stacked elements in this order: \"Hey Love\" heading, circular gradient heart icon, and \"14.02.2026\" date.",
+        "The inserted heart icon block uses the exact classes `w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center shadow-xl motion-safe:animate-pulse-glow` and renders a `Heart` icon with `size={30}` and `fill=\"currentColor\"`.",
+        "The envelope's existing heart seal remains present and visually on top (its current `z-20` behavior is unchanged)."
       ]
     }
   ],
   "constraints": [
-    "Apply changes ONLY to the elements identified by the provided XPaths; do not modify other page elements.",
-    "Use English for any new user-facing text (the string “1j6s3j2” must remain exactly as provided).",
-    "Do not edit files under frontend/src/components/ui or any other frontend immutablePaths."
+    "Do not edit files under `frontend/src/hooks/*` or `frontend/src/components/ui/*` (immutable paths).",
+    "Do not change any backend code; this request is frontend-only."
   ],
   "nonGoals": [
-    "No backend/canister changes.",
-    "No new screens, routes, or additional UI features beyond centering and the specified text/content update."
+    "Changing any other copy, dates, or content outside the specified `/* Content */` overlay block.",
+    "Adding or removing animations beyond those already referenced by the provided Tailwind classes."
   ],
   "imageRequirements": {
     "required": [],
@@ -38,7 +38,9 @@
   "userProfileUpdate": {
     "goalsToAdd": [],
     "goalsToRemove": [],
-    "preferencesToAdd": [],
+    "preferencesToAdd": [
+      "Use English for any user-facing text in build requests."
+    ],
     "preferencesToRemove": [],
     "miscToAdd": [],
     "miscToRemove": [],

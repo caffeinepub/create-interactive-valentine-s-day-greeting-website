@@ -1,16 +1,18 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "New project",
-  "architectural_notes": [],
+  "summary": "Valentine-themed envelope scene UI (React/Tailwind) with centered greeting/date content.",
+  "architectural_notes": [
+    "Envelope content overlay uses Tailwind classes including space-y-3, text-center, z-10; includes a Heart component and motion-safe:animate-pulse-glow animation class."
+  ],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-update-only-the-two-user-selected-dom-elements-element-1-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3-and-element-2-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-so-that-the-content-currently-associated-with-identified-as-65b0-is-centered-within-its-container-and-its-visible-text-content-is-changed-to-exactly-1j6s3j2",
-      "title": "Update ONLY the two user-selected DOM elements (Element 1 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3 and Element 2 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]) so that the content currently associated with/identified as “65b0” is centered within its container and its visible text/content is changed to exactly “1j6s3j2”.",
+      "id": "feature-in-frontend-src-components-valentineenvelopescene-tsx-locate-the-screen-1-envelope-overlay-block-marked-content-currently-rendering-only-the-hey-love-heading-and-the-14-02-2026-date-and-replace-it-with-the-user-provided-version-that-1-adds-text-center-space-y-3-and-z-10-to-the-container-2-removes-the-mb-2-class-from-the-heading-and-3-inserts-a-centered-circular-gradient-heart-icon-block-between-the-heading-and-the-date-using-heart-classname-text-white-size-30-fill-currentcolor-keep-the-visible-copy-exactly-hey-love-and-14-02-2026",
+      "title": "In `frontend/src/components/ValentineEnvelopeScene.tsx`, locate the Screen 1 envelope overlay block marked `/* Content */` (currently rendering only the \"Hey Love\" heading and the \"14.02.2026\" date) and replace it with the user-provided version that: (1) adds `text-center`, `space-y-3`, and `z-10` to the container, (2) removes the `mb-2` class from the heading, and (3) inserts a centered circular gradient heart icon block between the heading and the date using `<Heart className=\"text-white\" size={30} fill=\"currentColor\" />`. Keep the visible copy exactly \"Hey Love\" and \"14.02.2026\".",
       "reqIds": [
-        "REQ-1"
+        "REQ-3"
       ],
       "version": 1
     }
@@ -18,12 +20,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Adjust the center/position of element \"65b0\" to \"1j6s3j2\" (per user request)",
+      "summary": "Update envelope content overlay to include centered layout with heart icon, spacing, and z-index (replace existing Hey Love/date block).",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Center selected element and update its text from “65b0” to “1j6s3j2”",
+  "projectName": "Update envelope overlay content to include centered heart icon between greeting and date",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

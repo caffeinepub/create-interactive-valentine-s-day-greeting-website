@@ -1,21 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Center selected envelope content and update text to “1j6s3j2”",
+  "title": "Update envelope overlay to include centered heart icon between greeting and date",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Update only the two specified DOM elements so the “65b0” content is centered within its container and the visible text becomes exactly “1j6s3j2”.",
+      "id": "REQ-3",
+      "summary": "Replace the Screen 1 envelope overlay /* Content */ block with the provided centered layout and inserted circular gradient heart icon between the heading and date.",
       "acceptanceCriteria": [
-        "Within the area corresponding to /main/div/div[4], the selected inner element (/div[3]) is visually centered (horizontally; and vertically if applicable to that container).",
-        "The displayed text/content for the selected inner element is exactly “1j6s3j2”.",
-        "No other elements outside the two provided XPaths are modified (no unintended layout/text changes elsewhere in the scene)."
+        "The envelope overlay content container uses `className=\"absolute inset-0 flex flex-col items-center justify-center text-center p-6 space-y-3 z-10\"`.",
+        "The overlay shows three vertically-stacked elements in this order: \"Hey Love\" heading, circular gradient heart icon, and \"14.02.2026\" date.",
+        "The inserted heart icon block uses the exact classes `w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center shadow-xl motion-safe:animate-pulse-glow` and renders a `Heart` icon with `size={30}` and `fill=\"currentColor\"`.",
+        "The envelope's existing heart seal remains present and visually on top (its current `z-20` behavior is unchanged)."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/ValentineEnvelopeScene.tsx",
           "operation": "modify",
-          "description": "Modify ONLY the two JSX elements that correspond to the provided XPaths: (1) the 'Main content' wrapper div (matching /main/div/div[4]) and (2) the envelope 'Content' absolute div (the 3rd child div inside the envelope container, matching .../div[3]). Ensure the inner 'Content' div uses centering layout (horizontal and vertical as applicable) and replace the currently displayed “65b0” content so the visible text is exactly “1j6s3j2”, without changing any other DOM outside these two elements."
+          "description": "In the Screen 1 envelope overlay block marked `/* Content */`, update the container classes to include `text-center`, `space-y-3`, and `z-10` (matching the exact className from the requirement), remove `mb-2` from the \"Hey Love\" heading, and insert a centered circular gradient heart icon block between the heading and the \"14.02.2026\" date using `<Heart className=\"text-white\" size={30} fill=\"currentColor\" />`. Ensure the existing heart seal element (with `z-20`) is left unchanged so it remains visually on top."
         }
       ]
     }

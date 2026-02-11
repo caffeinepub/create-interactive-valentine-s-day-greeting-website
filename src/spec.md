@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Center the selected “65b0” content within its container and change its visible text to exactly “1j6s3j2”, updating only the two specified DOM elements.
+**Goal:** Update the Screen 1 envelope overlay to include a centered heart icon between the greeting and date.
 
 **Planned changes:**
-- Update the content/text within the element at `/html/body/div/div/main/div/div[4]/div/div/div/div[3]` from “65b0” to exactly “1j6s3j2”.
-- Adjust styling/layout on the two specified elements (`/html/body/div/div/main/div/div[4]` and its `/div[3]` descendant) so the inner selected element is centered horizontally (and vertically if applicable within that container).
+- In `frontend/src/components/ValentineEnvelopeScene.tsx`, replace the `/* Content */` overlay block with the provided version: add `text-center`, `space-y-3`, and `z-10` to the container, remove `mb-2` from the heading, and insert the circular gradient heart icon block between the heading and date.
+- Keep the visible copy exactly as “Hey Love” and “14.02.2026”, and leave the existing heart seal layering (`z-20`) unchanged.
 
-**User-visible outcome:** In the `/main/div/div[4]` area, the selected element is centered within its container and displays the text “1j6s3j2”, with no other page changes.
+**User-visible outcome:** The envelope overlay displays “Hey Love”, then a pulsing circular gradient heart icon, then “14.02.2026”, centered and vertically stacked.

@@ -1,6 +1,6 @@
 {
   "frontend/src/App.tsx": "Main application component that renders the Valentine's Day greeting scene and includes a footer with attribution and copyright.",
-  "frontend/src/components/ValentineEnvelopeScene.tsx": "Interactive envelope and greeting card component with state management for envelope opening, card reveal, and message display transitions, featuring \"Hey Love\" text, a centered circular gradient heart icon, and \"1j6s3j2\" text on the envelope with smooth animations and decorative elements.",
+  "frontend/src/components/ValentineEnvelopeScene.tsx": "Interactive envelope and greeting card component with state management for envelope opening, card reveal, and message display transitions, featuring \"Hey Love\" text, a centered circular gradient heart icon, and \"14.02.2026\" date on the envelope with smooth animations and decorative elements.",
   "frontend/src/components/ValentineMessageCard.tsx": "Full-screen message display component with typing animation, confetti effects, rising hearts, and action buttons for returning to the card view or resetting to the initial envelope screen.",
   "frontend/src/index.css": "Global styles with Valentine's Day themed OKLCH color system (warm rose/pink palette), custom keyframe animations for envelope, card, confetti, and heart effects, plus reduced-motion support.",
   "frontend/tailwind.config.js": "Tailwind configuration extended with custom font families (Inter and Playfair Display serif) for the Valentine's Day theme.",

@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-11T23:25:43.156Z",
+  "generatedAt": "2026-02-11T23:17:55.951Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,8 +11,8 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Update ONLY the two user-selected DOM elements (Element 1 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3 and Element 2 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]) so that the content currently associated with/identified as “65b0” is centered within its container and its visible text/content is changed to exactly “1j6s3j2”.",
+        "id": "REQ-3",
+        "summary": "In `frontend/src/components/ValentineEnvelopeScene.tsx`, locate the Screen 1 envelope overlay block marked `/* Content */` (currently rendering only the \"Hey Love\" heading and the \"14.02.2026\" date) and replace it with the user-provided version that: (1) adds `text-center`, `space-y-3`, and `z-10` to the container, (2) removes the `mb-2` class from the heading, and (3) inserts a centered circular gradient heart icon block between the heading and the date using `<Heart className=\"text-white\" size={30} fill=\"currentColor\" />`. Keep the visible copy exactly \"Hey Love\" and \"14.02.2026\".",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/ValentineEnvelopeScene.tsx"

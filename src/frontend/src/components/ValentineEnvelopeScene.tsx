@@ -154,8 +154,8 @@ export default function ValentineEnvelopeScene() {
                   </div>
 
                   {/* Date */}
-                  <p className="text-sm text-rose-500 tracking-widest flex items-center justify-center">
-                    1j6s3j2
+                  <p className="text-sm text-rose-500 tracking-widest">
+                    14.02.2026
                   </p>
 
                 </div>
