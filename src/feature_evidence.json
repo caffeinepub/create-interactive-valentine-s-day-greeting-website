@@ -1,0 +1,41 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-on-screen-1-envelope-scene-ensure-the-selected-envelope-content-block-is-visually-centered-on-the-screen-not-shifted-toward-the-left-apply-this-change-only-to-the-selected-element-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3",
+      "featureTitle": "On Screen 1 (envelope scene), ensure the selected envelope content block is visually centered on the screen (not shifted toward the left). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
+      "files": [
+        "frontend/src/components/ValentineEnvelopeScene.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-fix-the-layering-overlap-on-screen-1-so-that-the-hey-love-and-14-02-2026-text-is-not-rendered-behind-under-the-heart-emoji-heart-seal-apply-this-change-only-to-the-selected-element-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3",
+      "featureTitle": "Fix the layering/overlap on Screen 1 so that the \"Hey Love\" and \"14.02.2026\" text is not rendered behind/under the heart emoji (heart seal). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
+      "files": [
+        "frontend/src/components/ValentineEnvelopeScene.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

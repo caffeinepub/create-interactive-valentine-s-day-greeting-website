@@ -1,0 +1,37 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Center Screen 1 envelope content and fix text layering vs heart seal",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "summary": "Horizontally center the Screen 1 envelope content block in the viewport by adjusting only the specified content element’s styling.",
+      "acceptanceCriteria": [
+        "On Screen 1, the selected element’s rendered position is horizontally centered in the viewport on mobile and desktop breakpoints.",
+        "No other elements outside the selected XPath are modified as part of this change."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ValentineEnvelopeScene.tsx",
+          "operation": "modify",
+          "description": "Locate the envelope 'Content' <div> (currently: className=\"absolute inset-0 flex flex-col items-center justify-center p-6\") corresponding to the specified XPath and adjust ONLY this element’s positioning classes so its block is horizontally centered in the viewport at mobile and desktop breakpoints (e.g., center via left-1/2 + -translate-x-1/2 with an explicit width). Do not change any sibling/parent elements or text."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Ensure the Screen 1 envelope text ('Hey Love' and date) is not obscured by the heart seal by adjusting only the specified content element’s stacking/positioning.",
+      "acceptanceCriteria": [
+        "On Screen 1, \"Hey Love\" and \"14.02.2026\" are fully readable and not obscured by the heart seal/emoji.",
+        "The fix is achieved by adjusting only the selected element’s styling (e.g., stacking context/z-index/positioning), without changing copy text."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ValentineEnvelopeScene.tsx",
+          "operation": "modify",
+          "description": "Adjust ONLY the same envelope 'Content' <div> (the specified XPath) to prevent overlap with the heart seal: either raise its stacking context above the heart (e.g., add a higher z-index/positioning) and/or offset the content vertically within that element (e.g., change its internal alignment) so 'Hey Love' and '14.02.2026' remain fully readable. Do not modify the heart seal element, animations, or any copy text."
+        }
+      ]
+    }
+  ]
+}

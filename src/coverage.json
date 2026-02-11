@@ -1,0 +1,48 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-11T22:47:53.235Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Fix the layering/overlap on Screen 1 so that the \"Hey Love\" and \"14.02.2026\" text is not rendered behind/under the heart emoji (heart seal). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ValentineEnvelopeScene.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ValentineEnvelopeScene.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "On Screen 1 (envelope scene), ensure the selected envelope content block is visually centered on the screen (not shifted toward the left). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ValentineEnvelopeScene.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ValentineEnvelopeScene.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/ValentineEnvelopeScene.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

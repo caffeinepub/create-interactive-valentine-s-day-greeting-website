@@ -1,0 +1,32 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-11T22:47:53.232Z",
+  "summary": "Diff indicates a Screen 1 text layering adjustment (adding a higher z-index to the envelope content so \"Hey Love\"/date render above the heart seal). There is no clear evidence in the provided diff summary that the selected envelope content block was horizontally centered, and there are updates to project metadata/summaries that were not requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-9",
+      "requirement": "On Screen 1 (envelope scene), ensure the selected envelope content block is visually centered on the screen (not shifted toward the left), applying the change ONLY to the selected element at the provided XPath.",
+      "reason": "The diff summary does not show any centering-related style/class changes for the selected content block; it only mentions a z-index layering fix. The relevant section of the component is truncated, so there is insufficient evidence that centering was implemented.",
+      "evidence": [
+        "frontend/src/components/ValentineEnvelopeScene.tsx (truncated)",
+        "frontend-file-summaries.txt (only mentions z-30 layering fix)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Updated project state/summary text to claim broader Screen 1 layout updates (centered envelope, specific text placement) and removal of the hand-nudge hint across all screens.",
+      "reason": "These broader changes (especially hand-nudge removal across all screens) are not part of REQ-9/REQ-10 for this BuildRequest; the BuildRequest also lists non-goals that restrict changes to Screen 2/3 and disallow new UI changes beyond centering/overlap fixes.",
+      "evidence": [
+        "project_state.json (truncated)"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/ValentineEnvelopeScene.tsx",
+    "project_state.json"
+  ]
+}
