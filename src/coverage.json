@@ -1,29 +1,18 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-11T22:53:13.938Z",
+  "generatedAt": "2026-02-11T23:25:43.156Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-11",
-        "summary": "Remove the heart CTA from the envelope by ensuring there is no heart call-to-action element (heart emoji/icon, heart button, or CTA copy) inside the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]. Apply changes ONLY to that selected element.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/ValentineEnvelopeScene.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/ValentineEnvelopeScene.tsx"
-        ]
-      },
-      {
-        "id": "REQ-12",
-        "summary": "Update the styling/structure of the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3] so the envelope looks more like a real envelope (e.g., content positioned like an address area rather than a centered headline, subtle address-line treatment). Apply changes ONLY to that selected element.",
+        "id": "REQ-1",
+        "summary": "Update ONLY the two user-selected DOM elements (Element 1 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3 and Element 2 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]) so that the content currently associated with/identified as “65b0” is centered within its container and its visible text/content is changed to exactly “1j6s3j2”.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/ValentineEnvelopeScene.tsx"

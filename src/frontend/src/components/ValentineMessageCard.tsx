@@ -186,21 +186,22 @@ export default function ValentineMessageCard({ onBack, onResetToEnvelope }: Vale
 
           <Button
             onClick={onResetToEnvelope}
+            variant="outline"
             size="lg"
-            className="bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 hover:from-rose-600 hover:via-pink-600 hover:to-rose-700 text-white font-semibold px-8 py-6 rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
+            className="bg-white/80 backdrop-blur-sm border-rose-300 text-rose-700 hover:bg-rose-50 hover:border-rose-400 px-6 py-6 rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
           >
             <Sparkles className="mr-2" size={20} />
-            Again
+            Start Over
           </Button>
         </div>
 
         {/* Bottom decoration */}
         <div className="flex justify-center gap-3 mt-12 motion-safe:animate-fade-in-up">
-          {['🌸', '💗', '🌸'].map((emoji, i) => (
+          {['🌹', '💝', '🌹'].map((emoji, i) => (
             <span
               key={i}
               className="text-3xl motion-safe:animate-float-slow"
-              style={{ animationDelay: `${i * 0.3 + 0.5}s` }}
+              style={{ animationDelay: `${i * 0.3 + 1}s` }}
             >
               {emoji}
             </span>

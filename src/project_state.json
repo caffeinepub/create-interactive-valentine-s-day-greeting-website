@@ -1,107 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 11,
-  "summary": "Build a website (interactive Valentine’s Day greeting card) based on provided HTML/CSS/JS, including updated Screen 1 layout (centered envelope, \"Hey Love\" text above and \"14.02.2026\" below where the CTA was), removal of the heart CTA from the envelope, making the envelope look more like a realistic envelope, and removal of the hand-nudge hint across all screens.",
+  "projectStateVersion": 3,
+  "summary": "New project",
   "architectural_notes": [],
-  "known_issues": [
-    "Screen 1: Envelope is positioned toward the left instead of centered on the screen.",
-    "Screen 1: \"Hey Love\" and \"14.02.2026\" text is appearing behind/under the heart emoji (z-index/layering issue)."
-  ],
+  "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-build-a-complete-single-page-website-that-recreates-the-provided-valentine-s-day-interactive-greeting-card-experience-an-envelope-that-opens-on-user-interaction-revealing-a-card-then-displaying-a-valentine-message-with-smooth-animations-and-delightful-micro-interactions",
-      "title": "Build a complete single-page website that recreates the provided Valentine’s Day interactive greeting card experience: an envelope that opens on user interaction, revealing a card, then displaying a Valentine message with smooth animations and delightful micro-interactions.",
+      "id": "feature-update-only-the-two-user-selected-dom-elements-element-1-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3-and-element-2-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-so-that-the-content-currently-associated-with-identified-as-65b0-is-centered-within-its-container-and-its-visible-text-content-is-changed-to-exactly-1j6s3j2",
+      "title": "Update ONLY the two user-selected DOM elements (Element 1 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3 and Element 2 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]) so that the content currently associated with/identified as “65b0” is centered within its container and its visible text/content is changed to exactly “1j6s3j2”.",
       "reqIds": [
         "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-coherent-visual-theme-for-the-website-color-palette-typography-spacing-and-animation-style-and-apply-it-consistently-across-the-page-using-tailwind-css-avoid-blue-purple-as-the-primary-palette",
-      "title": "Create a coherent visual theme for the website (color palette, typography, spacing, and animation style) and apply it consistently across the page using Tailwind CSS. Avoid blue/purple as the primary palette.",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-basic-site-structure-and-metadata-a-page-title-a-short-description-for-sharing-seo-and-a-simple-footer-credit-line-all-user-facing-text-must-be-in-english",
-      "title": "Add basic site structure and metadata: a page title, a short description for sharing/SEO, and a simple footer credit line. All user-facing text must be in English.",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-include-generated-static-image-assets-for-the-valentine-s-theme-placed-under-frontend-public-assets-generated-and-render-them-in-the-ui-e-g-background-decoration-envelope-texture-or-heart-accents-without-routing-images-through-the-backend",
-      "title": "Include generated static image assets for the Valentine’s theme (placed under frontend/public/assets/generated) and render them in the UI (e.g., background decoration, envelope texture, or heart accents) without routing images through the backend.",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-action-button-on-the-message-screen-to-display-the-label-again-instead-of-replay",
-      "title": "Update the action button on the message screen to display the label \"Again\" instead of \"Replay\".",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-change-the-behavior-of-the-again-button-on-the-message-screen-so-that-clicking-it-navigates-back-to-screen-1-the-initial-envelope-screen",
-      "title": "Change the behavior of the \"Again\" button on the message screen so that clicking it navigates back to screen 1 (the initial envelope screen).",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-screen-1-envelope-scene-copy-so-the-date-text-exactly-matches-14-02-2026-not-an-abbreviated-form-while-keeping-hey-love-above-the-heart-cta",
-      "title": "Update Screen 1 (envelope scene) copy so the date text exactly matches \"14.02.2026\" (not an abbreviated form), while keeping \"Hey Love\" above the Heart CTA.",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-hand-nudge-hint-animation-from-all-screens-including-any-pointing-hand-emoji-and-associated-animation-classes-so-no-hand-nudge-appears-in-screen-1-screen-2-card-or-screen-3-message",
-      "title": "Remove the hand-nudge hint/animation from all screens (including any pointing-hand emoji and associated animation classes) so no hand-nudge appears in Screen 1, Screen 2 (card), or Screen 3 (message).",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-on-screen-1-envelope-scene-ensure-the-selected-envelope-content-block-is-visually-centered-on-the-screen-not-shifted-toward-the-left-apply-this-change-only-to-the-selected-element-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3",
-      "title": "On Screen 1 (envelope scene), ensure the selected envelope content block is visually centered on the screen (not shifted toward the left). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
-      "reqIds": [
-        "REQ-9"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-fix-the-layering-overlap-on-screen-1-so-that-the-hey-love-and-14-02-2026-text-is-not-rendered-behind-under-the-heart-emoji-heart-seal-apply-this-change-only-to-the-selected-element-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3",
-      "title": "Fix the layering/overlap on Screen 1 so that the \"Hey Love\" and \"14.02.2026\" text is not rendered behind/under the heart emoji (heart seal). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
-      "reqIds": [
-        "REQ-10"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-heart-cta-from-the-envelope-by-ensuring-there-is-no-heart-call-to-action-element-heart-emoji-icon-heart-button-or-cta-copy-inside-the-selected-envelope-content-block-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3-apply-changes-only-to-that-selected-element",
-      "title": "Remove the heart CTA from the envelope by ensuring there is no heart call-to-action element (heart emoji/icon, heart button, or CTA copy) inside the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]. Apply changes ONLY to that selected element.",
-      "reqIds": [
-        "REQ-11"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-styling-structure-of-the-selected-envelope-content-block-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3-so-the-envelope-looks-more-like-a-real-envelope-e-g-content-positioned-like-an-address-area-rather-than-a-centered-headline-subtle-address-line-treatment-apply-changes-only-to-that-selected-element",
-      "title": "Update the styling/structure of the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3] so the envelope looks more like a real envelope (e.g., content positioned like an address area rather than a centered headline, subtle address-line treatment). Apply changes ONLY to that selected element.",
-      "reqIds": [
-        "REQ-12"
       ],
       "version": 1
     }
@@ -109,48 +18,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Create a website using the provided interactive Valentine's Day greeting card HTML/CSS/JS (envelope open → card → message with animations).",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Update the end/replay UI: change the label from \"Replay\" to \"Again\" and make clicking it navigate back to screen 1 (initial envelope screen).",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "On Screen 1, center the envelope on the page.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-4",
-      "summary": "On Screen 1, add \"Hey Love\" text above the Heart CTA and \"14.02.2026\" below the Heart CTA.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-5",
-      "summary": "Remove the hand-nudge hint/animation from all 3 screens.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-6",
-      "summary": "Remove the heart CTA from the envelope on Screen 1.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-7",
-      "summary": "Adjust the Screen 1 envelope design/styling to look more like an envelope (more realistic envelope appearance).",
+      "summary": "Adjust the center/position of element \"65b0\" to \"1j6s3j2\" (per user request)",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Create interactive Valentine’s Day greeting website",
+  "projectName": "Center selected element and update its text from “65b0” to “1j6s3j2”",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

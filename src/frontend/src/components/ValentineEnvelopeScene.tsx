@@ -141,19 +141,23 @@ export default function ValentineEnvelopeScene() {
                 />
 
                 {/* Content */}
-                <div className="absolute bottom-8 left-8 right-8 flex flex-col items-start z-30">
-                  <div className="space-y-1 text-left">
-                    <p className="text-xs md:text-sm text-rose-600 uppercase tracking-wider font-medium">
-                      To: My Dearest
-                    </p>
-                    <div className="w-32 h-px bg-rose-300/50 my-1" />
-                    <p className="text-[10px] md:text-xs text-rose-500 tracking-wide">
-                      Valentine's Day 2026
-                    </p>
-                    <p className="text-[10px] md:text-xs text-rose-500 tracking-wide">
-                      With Love & Affection
-                    </p>
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 space-y-3 z-10">
+                  
+                  {/* Hey Love */}
+                  <h2 className="text-3xl md:text-4xl font-bold text-rose-700 font-serif">
+                    Hey Love
+                  </h2>
+
+                  {/* Heart Emoji */}
+                  <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center shadow-xl motion-safe:animate-pulse-glow">
+                    <Heart className="text-white" size={30} fill="currentColor" />
                   </div>
+
+                  {/* Date */}
+                  <p className="text-sm text-rose-500 tracking-widest flex items-center justify-center">
+                    1j6s3j2
+                  </p>
+
                 </div>
 
                 {/* Heart seal */}

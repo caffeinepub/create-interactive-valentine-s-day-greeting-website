@@ -1,51 +1,35 @@
 {
   "kind": "build_request",
-  "title": "Remove heart CTA and restyle envelope content to look more like a real envelope",
+  "title": "Center selected element and update its text from “65b0” to “1j6s3j2”",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-11",
-      "text": "Remove the heart CTA from the envelope by ensuring there is no heart call-to-action element (heart emoji/icon, heart button, or CTA copy) inside the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]. Apply changes ONLY to that selected element.",
+      "id": "REQ-1",
+      "text": "Update ONLY the two user-selected DOM elements (Element 1 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3 and Element 2 XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]) so that the content currently associated with/identified as “65b0” is centered within its container and its visible text/content is changed to exactly “1j6s3j2”.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages"
+          "msg-4"
         ],
         "quotes": [
-          "remove the heart CTA from the envlope"
+          "make the 65b0 ceneter to 1j6s3j2"
         ]
       },
       "acceptanceCriteria": [
-        "On Screen 1, the selected content block contains no heart CTA UI (no heart icon/emoji CTA, no heart button, and no CTA-like heart label)",
-        "No other elements outside the selected XPath are modified"
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "text": "Update the styling/structure of the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3] so the envelope looks more like a real envelope (e.g., content positioned like an address area rather than a centered headline, subtle address-line treatment). Apply changes ONLY to that selected element.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "recent-messages"
-        ],
-        "quotes": [
-          "make it look more like a envelop"
-        ]
-      },
-      "acceptanceCriteria": [
-        "On Screen 1, the content within the selected block is visually styled/positioned to resemble an envelope address area (not a centered CTA-style layout)",
-        "The selected block remains readable and does not appear underneath the heart seal (no overlap/obscuring)",
-        "No other elements outside the selected XPath are modified"
+        "Within the area corresponding to /main/div/div[4], the selected inner element (/div[3]) is visually centered (horizontally; and vertically if applicable to that container).",
+        "The displayed text/content for the selected inner element is exactly “1j6s3j2”.",
+        "No other elements outside the two provided XPaths are modified (no unintended layout/text changes elsewhere in the scene)."
       ]
     }
   ],
   "constraints": [
-    "Apply the requested changes ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
-    "All user-facing text must remain in English."
+    "Apply changes ONLY to the elements identified by the provided XPaths; do not modify other page elements.",
+    "Use English for any new user-facing text (the string “1j6s3j2” must remain exactly as provided).",
+    "Do not edit files under frontend/src/components/ui or any other frontend immutablePaths."
   ],
   "nonGoals": [
-    "Do not change any other parts of the envelope (flap/base/heart seal), scene flow, or animations outside the selected element.",
-    "Do not introduce any backend changes."
+    "No backend/canister changes.",
+    "No new screens, routes, or additional UI features beyond centering and the specified text/content update."
   ],
   "imageRequirements": {
     "required": [],

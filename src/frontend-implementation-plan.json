@@ -1,36 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove heart CTA and restyle envelope content to look more like a real envelope",
+  "title": "Center selected envelope content and update text to “1j6s3j2”",
   "requirements": [
     {
-      "id": "REQ-11",
-      "summary": "Remove any heart call-to-action content from the envelope’s selected content block only.",
+      "id": "REQ-1",
+      "summary": "Update only the two specified DOM elements so the “65b0” content is centered within its container and the visible text becomes exactly “1j6s3j2”.",
       "acceptanceCriteria": [
-        "On Screen 1, the selected content block contains no heart CTA UI (no heart icon/emoji CTA, no heart button, and no CTA-like heart label)",
-        "No other elements outside the selected XPath are modified"
+        "Within the area corresponding to /main/div/div[4], the selected inner element (/div[3]) is visually centered (horizontally; and vertically if applicable to that container).",
+        "The displayed text/content for the selected inner element is exactly “1j6s3j2”.",
+        "No other elements outside the two provided XPaths are modified (no unintended layout/text changes elsewhere in the scene)."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/ValentineEnvelopeScene.tsx",
           "operation": "modify",
-          "description": "Update ONLY the envelope ‘Content’ block (the div immediately under the comment `/* Content */` inside the envelope) so it contains no heart CTA elements: remove/avoid any heart emoji/icon, heart-themed button, or CTA-style copy within that block, without changing surrounding envelope elements (base/flap/heart seal) or any other scene UI."
-        }
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "summary": "Restyle the selected envelope content block only to resemble a real envelope address area and avoid overlap with the heart seal.",
-      "acceptanceCriteria": [
-        "On Screen 1, the content within the selected block is visually styled/positioned to resemble an envelope address area (not a centered CTA-style layout)",
-        "The selected block remains readable and does not appear underneath the heart seal (no overlap/obscuring)",
-        "No other elements outside the selected XPath are modified"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ValentineEnvelopeScene.tsx",
-          "operation": "modify",
-          "description": "Update ONLY the envelope ‘Content’ block (the div immediately under the comment `/* Content */` inside the envelope) to change layout from centered headline to an address-like composition (left-aligned, lower portion of envelope, subtle address-line styling such as small caps/handwritten-like text feel and thin line separators). Ensure the content is positioned to stay clear of the centered heart seal (no overlap) while remaining readable. Do not modify any elements outside this selected content block."
+          "description": "Modify ONLY the two JSX elements that correspond to the provided XPaths: (1) the 'Main content' wrapper div (matching /main/div/div[4]) and (2) the envelope 'Content' absolute div (the 3rd child div inside the envelope container, matching .../div[3]). Ensure the inner 'Content' div uses centering layout (horizontal and vertical as applicable) and replace the currently displayed “65b0” content so the visible text is exactly “1j6s3j2”, without changing any other DOM outside these two elements."
         }
       ]
     }
