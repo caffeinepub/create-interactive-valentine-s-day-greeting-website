@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-on-screen-1-envelope-scene-ensure-the-selected-envelope-content-block-is-visually-centered-on-the-screen-not-shifted-toward-the-left-apply-this-change-only-to-the-selected-element-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3",
-      "featureTitle": "On Screen 1 (envelope scene), ensure the selected envelope content block is visually centered on the screen (not shifted toward the left). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
+      "featureId": "feature-remove-the-heart-cta-from-the-envelope-by-ensuring-there-is-no-heart-call-to-action-element-heart-emoji-icon-heart-button-or-cta-copy-inside-the-selected-envelope-content-block-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3-apply-changes-only-to-that-selected-element",
+      "featureTitle": "Remove the heart CTA from the envelope by ensuring there is no heart call-to-action element (heart emoji/icon, heart button, or CTA copy) inside the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]. Apply changes ONLY to that selected element.",
       "files": [
         "frontend/src/components/ValentineEnvelopeScene.tsx"
       ],
@@ -15,13 +15,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-9"
+        "REQ-11"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-fix-the-layering-overlap-on-screen-1-so-that-the-hey-love-and-14-02-2026-text-is-not-rendered-behind-under-the-heart-emoji-heart-seal-apply-this-change-only-to-the-selected-element-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3",
-      "featureTitle": "Fix the layering/overlap on Screen 1 so that the \"Hey Love\" and \"14.02.2026\" text is not rendered behind/under the heart emoji (heart seal). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
+      "featureId": "feature-update-the-styling-structure-of-the-selected-envelope-content-block-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3-so-the-envelope-looks-more-like-a-real-envelope-e-g-content-positioned-like-an-address-area-rather-than-a-centered-headline-subtle-address-line-treatment-apply-changes-only-to-that-selected-element",
+      "featureTitle": "Update the styling/structure of the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3] so the envelope looks more like a real envelope (e.g., content positioned like an address area rather than a centered headline, subtle address-line treatment). Apply changes ONLY to that selected element.",
       "files": [
         "frontend/src/components/ValentineEnvelopeScene.tsx"
       ],
@@ -33,7 +33,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-10"
+        "REQ-12"
       ],
       "confidence": "high"
     }

@@ -1,55 +1,64 @@
 {
   "kind": "build_request",
-  "title": "Center Screen 1 envelope content and fix text layering vs heart seal",
+  "title": "Remove heart CTA and restyle envelope content to look more like a real envelope",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-9",
-      "text": "On Screen 1 (envelope scene), ensure the selected envelope content block is visually centered on the screen (not shifted toward the left). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
+      "id": "REQ-11",
+      "text": "Remove the heart CTA from the envelope by ensuring there is no heart call-to-action element (heart emoji/icon, heart button, or CTA copy) inside the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]. Apply changes ONLY to that selected element.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "recent-messages"
         ],
         "quotes": [
-          "place it in the center of the screen. (its place towards the left)"
+          "remove the heart CTA from the envlope"
         ]
       },
       "acceptanceCriteria": [
-        "On Screen 1, the selected element’s rendered position is horizontally centered in the viewport on mobile and desktop breakpoints.",
-        "No other elements outside the selected XPath are modified as part of this change."
+        "On Screen 1, the selected content block contains no heart CTA UI (no heart icon/emoji CTA, no heart button, and no CTA-like heart label)",
+        "No other elements outside the selected XPath are modified"
       ]
     },
     {
-      "id": "REQ-10",
-      "text": "Fix the layering/overlap on Screen 1 so that the \"Hey Love\" and \"14.02.2026\" text is not rendered behind/under the heart emoji (heart seal). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
+      "id": "REQ-12",
+      "text": "Update the styling/structure of the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3] so the envelope looks more like a real envelope (e.g., content positioned like an address area rather than a centered headline, subtle address-line treatment). Apply changes ONLY to that selected element.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "recent-messages"
         ],
         "quotes": [
-          "Hey Love and 14.02.2026 text appears behind the heart emoji"
+          "make it look more like a envelop"
         ]
       },
       "acceptanceCriteria": [
-        "On Screen 1, \"Hey Love\" and \"14.02.2026\" are fully readable and not obscured by the heart seal/emoji.",
-        "The fix is achieved by adjusting only the selected element’s styling (e.g., stacking context/z-index/positioning), without changing copy text."
+        "On Screen 1, the content within the selected block is visually styled/positioned to resemble an envelope address area (not a centered CTA-style layout)",
+        "The selected block remains readable and does not appear underneath the heart seal (no overlap/obscuring)",
+        "No other elements outside the selected XPath are modified"
       ]
     }
   ],
   "constraints": [
-    "Apply user instructions ONLY to the selected element identified by the provided XPath.",
-    "Do not edit files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT.",
+    "Apply the requested changes ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
     "All user-facing text must remain in English."
   ],
   "nonGoals": [
-    "No changes to Screen 2 (card) or Screen 3 (message) layout or content.",
-    "No backend changes.",
-    "No new animations or new UI features beyond centering and fixing text/heart overlap."
+    "Do not change any other parts of the envelope (flap/base/heart seal), scene flow, or animations outside the selected element.",
+    "Do not introduce any backend changes."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

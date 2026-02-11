@@ -1,29 +1,37 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-11T22:47:53.232Z",
-  "summary": "Diff indicates a Screen 1 text layering adjustment (adding a higher z-index to the envelope content so \"Hey Love\"/date render above the heart seal). There is no clear evidence in the provided diff summary that the selected envelope content block was horizontally centered, and there are updates to project metadata/summaries that were not requested.",
+  "generatedAt": "2026-02-11T22:53:13.936Z",
+  "summary": "The diff indicates work in the general envelope scene and updates to repository metadata/summaries, but the provided truncated code does not include the selected envelope content block, so REQ-11/REQ-12 cannot be verified as implemented strictly within the specified XPath-only constraint.",
   "missing_requirements": [
     {
-      "id": "REQ-9",
-      "requirement": "On Screen 1 (envelope scene), ensure the selected envelope content block is visually centered on the screen (not shifted toward the left), applying the change ONLY to the selected element at the provided XPath.",
-      "reason": "The diff summary does not show any centering-related style/class changes for the selected content block; it only mentions a z-index layering fix. The relevant section of the component is truncated, so there is insufficient evidence that centering was implemented.",
+      "id": "REQ-11",
+      "requirement": "Remove the heart CTA from the envelope by ensuring there is no heart call-to-action element inside the selected envelope content block at the specified XPath; apply changes ONLY to that selected element.",
+      "reason": "The diff for the main UI file is truncated before showing the envelope’s internal content block, so there is no direct evidence that a heart CTA was removed specifically from the targeted content block (nor that changes were limited only to that block).",
+      "evidence": [
+        "frontend/src/components/ValentineEnvelopeScene.tsx (truncated)"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "Update the styling/structure of the selected envelope content block so it resembles an address area and does not overlap the heart seal; apply changes ONLY to that selected element.",
+      "reason": "The only evidence is a narrative description in a summary file; the actual JSX/CSS for the selected content block is not visible in the truncated diff, so the address-area layout, non-overlap with the heart seal, and XPath-only scope cannot be confirmed.",
       "evidence": [
         "frontend/src/components/ValentineEnvelopeScene.tsx (truncated)",
-        "frontend-file-summaries.txt (only mentions z-30 layering fix)"
+        "frontend-file-summaries.txt"
       ]
     }
   ],
   "hallucinated_features": [
     {
-      "description": "Updated project state/summary text to claim broader Screen 1 layout updates (centered envelope, specific text placement) and removal of the hand-nudge hint across all screens.",
-      "reason": "These broader changes (especially hand-nudge removal across all screens) are not part of REQ-9/REQ-10 for this BuildRequest; the BuildRequest also lists non-goals that restrict changes to Screen 2/3 and disallow new UI changes beyond centering/overlap fixes.",
+      "description": "Project-wide state/summary updated with additional claims about Screen 1 layout text (e.g., \"Hey Love\" and \"14.02.2026\" placement) and removal of a hand-nudge hint, which are not part of this BuildRequest (REQ-11/REQ-12 only).",
+      "reason": "The BuildRequest is narrowly scoped to removing the heart CTA and restyling the selected envelope content block only; updating broader project summaries to include other features is outside the request and may imply unrelated work.",
       "evidence": [
         "project_state.json (truncated)"
       ]
     }
   ],
-  "confidence": 0.62,
+  "confidence": 0.45,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/ValentineEnvelopeScene.tsx",

@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
-  "summary": "Build a website (interactive Valentine’s Day greeting card) based on provided HTML/CSS/JS, including updated Screen 1 layout (centered envelope, \"Hey Love\" text above heart CTA, \"14.02.2026\" date below) and removal of the hand-nudge hint across all screens.",
+  "projectStateVersion": 11,
+  "summary": "Build a website (interactive Valentine’s Day greeting card) based on provided HTML/CSS/JS, including updated Screen 1 layout (centered envelope, \"Hey Love\" text above and \"14.02.2026\" below where the CTA was), removal of the heart CTA from the envelope, making the envelope look more like a realistic envelope, and removal of the hand-nudge hint across all screens.",
   "architectural_notes": [],
   "known_issues": [
     "Screen 1: Envelope is positioned toward the left instead of centered on the screen.",
     "Screen 1: \"Hey Love\" and \"14.02.2026\" text is appearing behind/under the heart emoji (z-index/layering issue)."
   ],
-  "isFixRequest": true,
+  "isFixRequest": false,
   "existing_features": [
     {
       "id": "feature-build-a-complete-single-page-website-that-recreates-the-provided-valentine-s-day-interactive-greeting-card-experience-an-envelope-that-opens-on-user-interaction-revealing-a-card-then-displaying-a-valentine-message-with-smooth-animations-and-delightful-micro-interactions",
@@ -88,6 +88,22 @@
         "REQ-10"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-the-heart-cta-from-the-envelope-by-ensuring-there-is-no-heart-call-to-action-element-heart-emoji-icon-heart-button-or-cta-copy-inside-the-selected-envelope-content-block-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3-apply-changes-only-to-that-selected-element",
+      "title": "Remove the heart CTA from the envelope by ensuring there is no heart call-to-action element (heart emoji/icon, heart button, or CTA copy) inside the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]. Apply changes ONLY to that selected element.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-styling-structure-of-the-selected-envelope-content-block-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-div-4-div-1-div-1-div-1-div-3-so-the-envelope-looks-more-like-a-real-envelope-e-g-content-positioned-like-an-address-area-rather-than-a-centered-headline-subtle-address-line-treatment-apply-changes-only-to-that-selected-element",
+      "title": "Update the styling/structure of the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3] so the envelope looks more like a real envelope (e.g., content positioned like an address area rather than a centered headline, subtle address-line treatment). Apply changes ONLY to that selected element.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -118,6 +134,18 @@
     {
       "id": "AR-5",
       "summary": "Remove the hand-nudge hint/animation from all 3 screens.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Remove the heart CTA from the envelope on Screen 1.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Adjust the Screen 1 envelope design/styling to look more like an envelope (more realistic envelope appearance).",
       "reqIds": [],
       "status": "pending"
     }

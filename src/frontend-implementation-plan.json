@@ -1,35 +1,36 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Center Screen 1 envelope content and fix text layering vs heart seal",
+  "title": "Remove heart CTA and restyle envelope content to look more like a real envelope",
   "requirements": [
     {
-      "id": "REQ-9",
-      "summary": "Horizontally center the Screen 1 envelope content block in the viewport by adjusting only the specified content element’s styling.",
+      "id": "REQ-11",
+      "summary": "Remove any heart call-to-action content from the envelope’s selected content block only.",
       "acceptanceCriteria": [
-        "On Screen 1, the selected element’s rendered position is horizontally centered in the viewport on mobile and desktop breakpoints.",
-        "No other elements outside the selected XPath are modified as part of this change."
+        "On Screen 1, the selected content block contains no heart CTA UI (no heart icon/emoji CTA, no heart button, and no CTA-like heart label)",
+        "No other elements outside the selected XPath are modified"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/ValentineEnvelopeScene.tsx",
           "operation": "modify",
-          "description": "Locate the envelope 'Content' <div> (currently: className=\"absolute inset-0 flex flex-col items-center justify-center p-6\") corresponding to the specified XPath and adjust ONLY this element’s positioning classes so its block is horizontally centered in the viewport at mobile and desktop breakpoints (e.g., center via left-1/2 + -translate-x-1/2 with an explicit width). Do not change any sibling/parent elements or text."
+          "description": "Update ONLY the envelope ‘Content’ block (the div immediately under the comment `/* Content */` inside the envelope) so it contains no heart CTA elements: remove/avoid any heart emoji/icon, heart-themed button, or CTA-style copy within that block, without changing surrounding envelope elements (base/flap/heart seal) or any other scene UI."
         }
       ]
     },
     {
-      "id": "REQ-10",
-      "summary": "Ensure the Screen 1 envelope text ('Hey Love' and date) is not obscured by the heart seal by adjusting only the specified content element’s stacking/positioning.",
+      "id": "REQ-12",
+      "summary": "Restyle the selected envelope content block only to resemble a real envelope address area and avoid overlap with the heart seal.",
       "acceptanceCriteria": [
-        "On Screen 1, \"Hey Love\" and \"14.02.2026\" are fully readable and not obscured by the heart seal/emoji.",
-        "The fix is achieved by adjusting only the selected element’s styling (e.g., stacking context/z-index/positioning), without changing copy text."
+        "On Screen 1, the content within the selected block is visually styled/positioned to resemble an envelope address area (not a centered CTA-style layout)",
+        "The selected block remains readable and does not appear underneath the heart seal (no overlap/obscuring)",
+        "No other elements outside the selected XPath are modified"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/ValentineEnvelopeScene.tsx",
           "operation": "modify",
-          "description": "Adjust ONLY the same envelope 'Content' <div> (the specified XPath) to prevent overlap with the heart seal: either raise its stacking context above the heart (e.g., add a higher z-index/positioning) and/or offset the content vertically within that element (e.g., change its internal alignment) so 'Hey Love' and '14.02.2026' remain fully readable. Do not modify the heart seal element, animations, or any copy text."
+          "description": "Update ONLY the envelope ‘Content’ block (the div immediately under the comment `/* Content */` inside the envelope) to change layout from centered headline to an address-like composition (left-aligned, lower portion of envelope, subtle address-line styling such as small caps/handwritten-like text feel and thin line separators). Ensure the content is positioned to stay clear of the centered heart seal (no overlap) while remaining readable. Do not modify any elements outside this selected content block."
         }
       ]
     }

@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-11T22:47:53.235Z",
+  "generatedAt": "2026-02-11T22:53:13.938Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,8 +11,8 @@
     "implemented": 2,
     "items": [
       {
-        "id": "REQ-10",
-        "summary": "Fix the layering/overlap on Screen 1 so that the \"Hey Love\" and \"14.02.2026\" text is not rendered behind/under the heart emoji (heart seal). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
+        "id": "REQ-11",
+        "summary": "Remove the heart CTA from the envelope by ensuring there is no heart call-to-action element (heart emoji/icon, heart button, or CTA copy) inside the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]. Apply changes ONLY to that selected element.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/ValentineEnvelopeScene.tsx"
@@ -22,8 +22,8 @@
         ]
       },
       {
-        "id": "REQ-9",
-        "summary": "On Screen 1 (envelope scene), ensure the selected envelope content block is visually centered on the screen (not shifted toward the left). Apply this change ONLY to the selected element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3].",
+        "id": "REQ-12",
+        "summary": "Update the styling/structure of the selected envelope content block at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3] so the envelope looks more like a real envelope (e.g., content positioned like an address area rather than a centered headline, subtle address-line treatment). Apply changes ONLY to that selected element.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/ValentineEnvelopeScene.tsx"

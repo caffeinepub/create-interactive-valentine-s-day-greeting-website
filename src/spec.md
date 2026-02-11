@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Center the selected envelope content block on Screen 1 and ensure its text is not obscured by the heart seal.
+**Goal:** Remove the heart call-to-action from the specified envelope content block and restyle that block to resemble a real envelope address area.
 
 **Planned changes:**
-- Update styling for the single selected Screen 1 element so it is horizontally centered in the viewport across mobile and desktop breakpoints.
-- Adjust the selected element’s stacking/positioning styles so “Hey Love” and “14.02.2026” render above (not behind) the heart seal/emoji without changing the text.
+- Remove any heart CTA UI/content (heart emoji/icon, heart button, or CTA-like heart label/copy) from the selected envelope content block at the specified XPath.
+- Update the layout/styling within that same selected block so it reads like an envelope address area (e.g., address-line treatment and positioning), while remaining readable and not overlapping the heart seal.
 
-**User-visible outcome:** On Screen 1, the envelope content block appears centered and the “Hey Love” / “14.02.2026” text remains fully readable and unobstructed by the heart seal.
+**User-visible outcome:** On Screen 1, the envelope’s content area no longer includes any heart CTA and is styled/positioned like a realistic address block, without changing anything else on the screen.
